@@ -12,7 +12,7 @@ public class ReportUtil {
 
     public static void generateCucumberReport(String karateOutputPath) {
         try {
-            Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[]{"src/test/json"}, true);
+            Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[]{"json"}, true);
             List<String> jsonPaths = jsonFiles.stream().map(File::getAbsolutePath).collect(Collectors.toList());
             Configuration config = new Configuration(new File("target"), "Cucumber Reports");
             File copied = new File("target/builder/cucumber.json");
