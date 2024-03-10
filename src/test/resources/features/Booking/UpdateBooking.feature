@@ -11,8 +11,6 @@ Feature: Updates a current booking
     * def token = tokenSuccess.response.token
     * def createUser = call read('create.feature')
     * def id = createUser.response.bookingid
-    * print id
-    * print token
     # Search id before update
     Given url baseUrl + '/booking'
     And header Accept = 'application/json'

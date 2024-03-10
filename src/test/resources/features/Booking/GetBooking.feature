@@ -8,15 +8,17 @@ Feature: Returns a specific booking based upon the booking id provided
 
   @ValidID
   Scenario: Returns booking by valid ID
-    * def json = allData.ValidID
-    And path 11
+    * def json = allData.Create
+    * def createUser = call read('create.feature')
+    * def id = createUser.response.bookingid
+    And path id
     When method get
     Then status 200
     * match response == json
 
   @IDNoExist
   Scenario: Verify that doesn't return booking if ID not exist
-    And path 999
+    And path 6666
     When method get
     Then status 404
     * match response == "Not Found"
