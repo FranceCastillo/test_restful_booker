@@ -2,25 +2,24 @@ Feature: Updates a current booking with a partial payload
 
   Background:
     * def baseUrl = 'https://restful-booker.herokuapp.com'
-    * header Content-Type = 'application/json'
-    * header Accept = 'application/json'
     * def allData = read('classpath:json/data.json')
 
   @UpdateName
   Scenario: Update only name of current booking
-    * def jsonCredencials = allData.AuthSuccess
     * def jsonUpdate = allData.PartialUpdate
     * def tokenSuccess = call read('TokenSuccess.feature')
     * def token = tokenSuccess.response.token
-    * def createUser = call read('createToDelete.feature')
+    * def createUser = call read('create.feature')
     * def id = createUser.response.bookingid
-    Given url baseUrl + '/booking/:id'
+    #Search id
+    Given url baseUrl + '/booking'
     And path id
     And header Content-Type = 'application/json'
     And header Accept = 'application/json'
     When method get
     And def beforeUpdate = response
-    Given url baseUrl + '/booking/:id'
+    #Update name
+    Given url baseUrl + '/booking'
     And path id
     Given request jsonUpdate
     And header Content-Type = 'application/json'

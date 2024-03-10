@@ -146,19 +146,9 @@
     },
     "additionalneeds": "Breakfast"
   },
+
   "PartialUpdate": {
     "firstname": "Lorena",
     "lastname": "Martinez"
-  },
-  "CreateBeforeDelete": {
-    "firstname": "Susan",
-    "lastname": "Jons",
-    "totalprice": 2566,
-    "depositpaid": true,
-    "bookingdates": {
-      "checkin": "2023-05-05",
-      "checkout": "2023-06-08"
-    },
-    "additionalneeds": "Breakfast"
   }
 }
