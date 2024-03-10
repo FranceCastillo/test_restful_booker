@@ -1,0 +1,164 @@
+{
+  "AuthSuccess": {
+    "username": "admin",
+    "password": "password123"
+  },
+  "AuthIncorrectUser": {
+    "username": "pedro",
+    "password": "password123"
+  },
+  "AuthIncorrectPass": {
+    "username": "admin",
+    "password": "password456"
+  },
+  "AuthEmptyUser": {
+    "password": "password123"
+  },
+  "AuthEmptyPass": {
+    "username": "admin"
+  },
+  "AuthEmptyUserAndPass": {
+    "username": "",
+    "password": ""
+  },
+  "SearchByName": {
+    "firstname": "Jim",
+    "lastname": "Brown"
+  },
+  "Bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+
+  "ValidID": {
+    "firstname": "John",
+    "lastname": "Smith",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2018-01-01",
+      "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+},
+  "ValidCreated": {
+    "bookingid": "#ignore",
+    "booking": {
+      "firstname": "Francesca",
+      "lastname": "Castillo",
+      "totalprice": 555,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2023-04-05",
+        "checkout": "2023-04-08"
+      },
+      "additionalneeds": "Breakfast"
+    }
+  },
+  "Create": {
+    "firstname": "Francesca",
+    "lastname": "Castillo",
+    "totalprice": 555,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-04-05",
+      "checkout": "2023-04-08"
+    },
+    "additionalneeds": "Breakfast"
+  },
+
+  "CreateWithoutName": {
+      "firstname": "",
+      "lastname": "Castillo",
+      "totalprice": 555,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2023-04-05",
+        "checkout": "2023-04-08"
+      },
+      "additionalneeds": "Breakfast"
+    },
+
+  "CreateWithoutLastName": {
+    "firstname": "Francesca",
+    "lastname": "",
+    "totalprice": 555,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-04-05",
+      "checkout": "2023-04-08"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "CreateWithoutLastName": {
+    "firstname": "",
+    "lastname": "Castillo",
+    "totalprice": 555,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-04-05",
+      "checkout": "2023-04-08"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "CreateWithoutPrice": {
+    "firstname": "Francesca",
+    "lastname": "Castillo",
+    "totalprice": 0,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-04-05",
+      "checkout": "2023-04-08"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "CreateWithoutCheckin": {
+    "firstname": "Francesca",
+    "lastname": "Castillo",
+    "totalprice": 0,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "",
+      "checkout": "2023-04-08"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "CreateWithoutCheckout": {
+    "firstname": "Francesca",
+    "lastname": "Castillo",
+    "totalprice": 0,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-04-05",
+      "checkout": ""
+    },
+    "additionalneeds": "Breakfast"
+  },
+
+  "Update": {
+    "firstname": "Rodrigo",
+    "lastname": "Gomez",
+    "totalprice": 0,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-02-28",
+      "checkout": "2023-03-04"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "PartialUpdate": {
+    "firstname": "Lorena",
+    "lastname": "Martinez"
+  },
+  "CreateBeforeDelete": {
+    "firstname": "Susan",
+    "lastname": "Jons",
+    "totalprice": 2566,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-05-05",
+      "checkout": "2023-06-08"
+    },
+    "additionalneeds": "Breakfast"
+  }
+}
