@@ -7,7 +7,7 @@ Feature: Updates a current booking with a partial payload
   @UpdateName
   Scenario: Update only name of current booking
     * def jsonUpdate = allData.PartialUpdate
-    * def tokenSuccess = call read('TokenSuccess.feature')
+    * def tokenSuccess = call read('classpath:features/Auth/TokenSuccess.feature')
     * def token = tokenSuccess.response.token
     * def createUser = call read('create.feature')
     * def id = createUser.response.bookingid

@@ -7,7 +7,7 @@ Feature: Updates a current booking
   @Update
   Scenario: Update a current booking
     * def jsonUpdate = allData.Update
-    * def tokenSuccess = call read('TokenSuccess.feature')
+    * def tokenSuccess = call read('classpath:features/Auth/TokenSuccess.feature')
     * def token = tokenSuccess.response.token
     * def createUser = call read('create.feature')
     * def id = createUser.response.bookingid
@@ -33,20 +33,17 @@ Feature: Updates a current booking
 
   @UpdateIdNotExist
   Scenario: Update id not exist
-    * def jsonCredencials = allData.AuthSuccess
     * def jsonUpdate = allData.Update
-    Given url 'https://restful-booker.herokuapp.com/auth'
-    Given request jsonCredencials
-    When method post
-    And def token = response.token
-    Given url 'https://restful-booker.herokuapp.com/booking'
+    * def tokenSuccess = call read('classpath:features/Auth/TokenSuccess.feature')
+    * def token = tokenSuccess.response.token
+    Given url baseUrl + '/booking'
     And path 99999
     And header Content-Type = 'application/json'
     And header Accept = 'application/json'
     When method get
     Then status 404
     * match response == "Not Found"
-    Given url 'https://restful-booker.herokuapp.com/booking'
+    Given url baseUrl + '/booking'
     And path 99999
     Given request jsonUpdate
     And header Content-Type = 'application/json'

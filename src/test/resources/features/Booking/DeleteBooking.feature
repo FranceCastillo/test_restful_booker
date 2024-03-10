@@ -8,7 +8,7 @@ Feature: Delete a current booking
   @Delete
   Scenario: Delete a current booking
     * def jsonCreateBeforeDelete = allData.CreateBeforeDelete
-    * def tokenSuccess = call read('TokenSuccess.feature')
+    * def tokenSuccess = call read('classpath:features/Auth/TokenSuccess.feature')
     * def token = tokenSuccess.response.token
     * def createUser = call read('create.feature')
     * def id = createUser.response.bookingid

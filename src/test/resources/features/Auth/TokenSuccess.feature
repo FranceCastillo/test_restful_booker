@@ -5,7 +5,7 @@ Feature: Verify the creation of a new auth token
     * def allData = read('classpath:json/data.json')
 
   @Success
-  Scenario: Token Sucess
+  Scenario: Verify token with valid username and password
     * def json = allData.AuthSuccess
     Given request json
     When method post

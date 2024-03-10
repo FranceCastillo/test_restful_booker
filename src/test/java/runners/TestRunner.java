@@ -14,8 +14,17 @@ import static util.ReportUtil.generateCucumberReport;
 class TestRunner {
     final static Logger looger = LoggerFactory.getLogger(TestRunner.class);
     @Test
-    void Auth() {
-        Results results = Runner.path("classpath:features/Auth/CreateToken.feature")
+    void TokenSuccess() {
+        Results results = Runner.path("classpath:features/Auth/TokenSuccess.feature")
+                .outputCucumberJson(true)
+                .parallel(1);
+        generateCucumberReport(results.getReportDir(), false);
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+    }
+
+    @Test
+    void TokenIncorrect() {
+        Results results = Runner.path("classpath:features/Auth/TokenIncorrect.feature")
                 .outputCucumberJson(true)
                 .parallel(1);
         generateCucumberReport(results.getReportDir(), false);
