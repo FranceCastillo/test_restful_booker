@@ -31,8 +31,7 @@ Feature: Creates a new booking in the API
     And header Accept = 'application/json'
     Given request json
     When method post
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
   @CreateWithoutLastName
   Scenario: Create a new booking without lastname
@@ -41,8 +40,7 @@ Feature: Creates a new booking in the API
     And header Accept = 'application/json'
     Given request json
     When method post
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
   @CreateWithoutPrice
   Scenario: Create a new booking without price
@@ -51,8 +49,7 @@ Feature: Creates a new booking in the API
     And header Accept = 'application/json'
     Given request json
     When method post
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
   @CreateWithoutCheckin
   Scenario: Create a new booking without checkin
@@ -61,8 +58,7 @@ Feature: Creates a new booking in the API
     And header Accept = 'application/json'
     Given request json
     When method post
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
   @CreateWithoutCheckout
   Scenario: Create a new booking without checkout
@@ -71,5 +67,4 @@ Feature: Creates a new booking in the API
     And header Accept = 'application/json'
     Given request json
     When method post
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)

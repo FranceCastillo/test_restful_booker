@@ -12,8 +12,7 @@ Feature: Verify the creation with incorrect credentials
     When method post
     And match response.reason != null
     And match response.reason == "Bad credentials"
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
 
   @AuthIncorrecPass
@@ -23,8 +22,7 @@ Feature: Verify the creation with incorrect credentials
     When method post
     And match response.reason != null
     And match response.reason == "Bad credentials"
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
 
   @AuthEmptyUser
@@ -36,8 +34,7 @@ Feature: Verify the creation with incorrect credentials
     And match response.reason == "Bad credentials"
     And match response.reason != null
     And match response.reason == "Bad credentials"
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
 
   @AuthEmptyPass
@@ -47,8 +44,7 @@ Feature: Verify the creation with incorrect credentials
     When method post
     And match response.reason != null
     And match response.reason == "Bad credentials"
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus))
 
 
   @AuthEmptyUserAndPass
@@ -58,7 +54,6 @@ Feature: Verify the creation with incorrect credentials
     When method post
     And match response.reason != null
     And match response.reason == "Bad credentials"
-    * def responseStatus = response
-    * if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
+    Then if (responseStatus != 400) karate.log('Status code was not 400, it was:', responseStatus)
 
 
