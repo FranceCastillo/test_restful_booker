@@ -8,7 +8,7 @@ API [RESTFUL - BOOKER](https://restful-booker.herokuapp.com/apidoc/index.html)
 ## 🏠 Detalles del Tester
 
 * Name: `Francesca Castillo`
-* Country: `Santiago de Chile`
+* Country: `Chile`
 * City: `Santiago de Chile`
 * LinkedIn: [https://www.linkedin.com/in/francesca-castillo/](https://www.linkedin.com/in/francesca-castillo/)
 
