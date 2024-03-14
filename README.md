@@ -26,7 +26,7 @@ Este proyecto utiliza los siguientes lenguajes y frameworks:
 ## Ejecución de test
 
 Windowns:
-* Abrir el proyecyo en el ide de su preferencia
+* Abrir el proyecto en el IDE de su preferencia
 * Ejecutar el siguiente comando: mvn test -Dtest=TestRunner
 
 ***
